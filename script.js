@@ -1,4 +1,7 @@
 const cursor = document.querySelector('.custom-cursor');
+const burger = document.querySelector('.burger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeBtn = document.querySelector('.close-button');
 
 // for desktop
 document.addEventListener('mousemove', (e) => {
@@ -15,3 +18,11 @@ document.addEventListener('touchmove', (e) => {
 });
 
 
+// header
+burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+});
+
+closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+});

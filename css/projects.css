@@ -1,0 +1,92 @@
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border-radius: 10px;
+    padding: 1.5rem;
+    padding-top: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px var(--shadow-strong),
+        0 0 12px var(--glow-red);
+}
+
+/* Fake VS Code header */
+.editor-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.9rem;
+    background: var(--bg-darkest);
+    margin: 0 -1.5rem 1rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff5f57;
+}
+
+.yellow {
+    background: #febc2e;
+}
+
+.green {
+    background: #28c840;
+}
+
+.filename {
+    margin-left: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--muted-text);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 290px;
+    object-fit: cover;
+}
+
+/*Links*/
+.project-link {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    display: flex;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-link a {
+    position: relative;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Underline animation */
+.project-link a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background: var(--primary-light);
+    transition: width 0.3s ease;
+}
+
+.project-link a:hover::after {
+    width: 100%;
+}

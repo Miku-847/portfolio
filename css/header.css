@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: var(--header-height);
+    height: 6rem;
     z-index: 1000;
     background: linear-gradient(to bottom,
             rgba(22, 27, 34, 0.7),
@@ -22,12 +22,53 @@
     height: 100%;
 }
 
+.nav-links a,
+.mobile-menu a {
+    position: relative;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Underline animation */
+.nav-links a::after,
+.mobile-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: transform 0.30s ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.nav-links a::after {
+    width: 100%;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.mobile-menu a::after {
+    width: 75%;
+}
+
+.mobile-menu a:hover::after,
+.mobile-menu a:focus::after {
+    transform: scaleX(1);
+}
+
+
 /*hidden in computer*/
 .burger {
     display: none;
     font-size: 1.8rem;
+    left: 1rem;
+    top: 1.2rem;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .mobile-menu {
@@ -43,11 +84,7 @@
     .burger {
         display: inline-block;
         position: fixed;
-        left: 1rem;
-        top: 1.2rem;
         z-index: 2000;
-        cursor: pointer;
-        color: var(--primary-color);
     }
 
     .mobile-menu {
@@ -67,7 +104,6 @@
         opacity: 0;
         transform: translateX(-100%);
         pointer-events: none;
-
         transition: transform 0.4s ease, opacity 0.4s ease;
         z-index: 200000;
         /* ABOVE header */
@@ -83,8 +119,8 @@
 /* close button- x */
 .close-button {
     margin-left: auto;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.8rem;
-    color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-color);
     cursor: pointer;
 }

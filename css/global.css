@@ -75,8 +75,30 @@ a:visited {
 }
 
 .contact-section a {
+    position: relative;
     color: var(--text-color);
+    text-decoration: none;
 }
+
+/* Underline animation */
+.contact-section a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-section a:hover::after,
+.contact-section a:focus::after {
+    transform: scaleX(1);
+}
+
 
 
 footer {

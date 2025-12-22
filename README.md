@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-**Live site:** https://miku-847.github.io/portfolio/
+**Live site:** https://miku-847.github.io/Portfolio/
 
 This is my personal portfolio website showcasing a selection of projects I’ve built while studying Computer Science.
 

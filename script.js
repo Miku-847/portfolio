@@ -5,36 +5,35 @@ const burger = document.querySelector('.burger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeBtn = document.querySelector('.js-close-button');
 
+const projectList = document.querySelector('.project-list');
+
+
 // for desktop
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 });
 
 // header for mobile layout
 burger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
 });
 
 closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
+  mobileMenu.classList.remove('open');
 });
 
 mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-    });
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
 });
 
-
-
-const projectList = document.querySelector('.project-list');
-
 projects.forEach(project => {
-    const card = document.createElement('div');
-    card.className = 'project-card';
+  const card = document.createElement('div');
+  card.className = 'project-card';
 
-    card.innerHTML = `
+  card.innerHTML = `
     <div class="editor-bar">
       <span class="dot red"></span>
       <span class="dot yellow"></span>
@@ -59,5 +58,5 @@ projects.forEach(project => {
     </div>
   `;
 
-    projectList.appendChild(card);
+  projectList.appendChild(card);
 });

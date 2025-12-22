@@ -60,8 +60,7 @@
     transform: scaleX(1);
 }
 
-
-/*hidden in computer*/
+/*hidden in computers*/
 .burger {
     display: none;
     font-size: 1.8rem;

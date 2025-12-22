@@ -1,14 +1,14 @@
 export const projects = [
     {
         title: "Weather Dashboard",
-        description: "A weather dashboard using the OpenWeather API with state driven UI updates.",
+        description: "A weather dashboard using the OpenWeather API with state-driven UI updates.",
         learnings: [
             "Used asynchronous JavaScript to fetch and display data from an external API",
             "Separated logic into modules for maintainability",
-            "Handled loading and error UI states"
+            "Handled loading and error UI states."
         ],
         image: "screenshots/weather-dashboard.png",
-        demo: "https://miku-847.github.io/weather-dashboard/",
+        demo: "https://miku-847.github.io/Weather-Dashboard/",
         github: "https://github.com/miku-847/weather-dashboard",
     },
     {
@@ -17,7 +17,7 @@ export const projects = [
         learnings: [
             "Built a modular Python CLI application using multiple files",
             "Worked with file I/O and JSON for persistent data storage",
-            "Implemented user input handling and validation in a command line interface"
+            "Implemented user input handling and validation in a command-line interface."
         ],
         image: "screenshots/todo-cli.png",
         github: "https://github.com/miku-847/todo-cli",
@@ -27,10 +27,10 @@ export const projects = [
         description: "A browser game built to practice JavaScript fundamentals.",
         learnings: [
             "Practiced core JavaScript concepts including event handling, conditionals, and DOM manipulation",
-            "Used localStorage to persist scores"
+            "Used localStorage to persist scores."
         ],
         image: "screenshots/rps.png",
-        demo: "https://miku-847.github.io/rock-paper-scissors/",
+        demo: "https://miku-847.github.io/RPS-practice-project/",
         github: "https://github.com/miku-847/rock-paper-scissors",
     }
 ];
